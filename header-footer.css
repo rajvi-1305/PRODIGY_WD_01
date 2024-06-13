@@ -1,0 +1,146 @@
+#header {
+    background-color: rgb(47, 46, 134);
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+nav {
+    padding-bottom: 0;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sticky-menu {
+    background-color: rgb(47, 46, 134);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.sticky-menu.scrolled {
+    background-color: rgb(8, 7, 48);
+}
+
+.title {
+    display: flex;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 900;
+    margin-right: 12px;
+    margin-left: 1px;
+    align-items: center;
+    padding-left: 15px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: end;
+}
+
+li {
+    font-size: large;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+a.menu:link, a.menu:visited, a.menu:active {
+    text-decoration-line: none;
+    color: white;
+}
+
+a.menu:hover {
+    color: rgb(152, 152, 152);
+    font-size: larger;
+    transition: font-size 0.5s ease-in-out;
+}
+
+#footer {
+    position: relative;
+    position: absolute;
+    width: 100%;
+    background: white;
+    text-align: center;
+    padding: 40px 0 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 32px;
+}
+
+.social-icons img:hover {
+    width: 42px;
+    transition: width 0.5s ease-in-out;
+}
+
+footer p {
+    margin: 15px 0 0 0;
+}
+
+a.copy:link,
+a.copy:visited,
+a.copy:active {
+    text-decoration-line: none;
+    color: #000;
+}
+
+a.copy:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .sticky-menu ul {
+        /* flex-direction: column; */
+        align-items: center;
+    }
+
+    .sticky-menu ul li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer-section {
+        margin: 10px 0; 
+    }
+}
